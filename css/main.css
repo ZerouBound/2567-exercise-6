@@ -134,15 +134,28 @@ form a:hover {
 /*--------------------------------------------------------------
 1.5 - LISTS
 -------------------------------------------------------------- */
-dt, dd {
-	display: inline;
+footer ul {
+	list-style: none;
+	padding:0;
 }
-dt {
+footer li {
 	font-weight:100;
-	width: 20px;
 }
-dd {
+footer li span {
 	font-weight: 600;
+	margin-left:21px;
+}
+
+footer li:nth-child(2) span {
+	margin-left:40.5px;
+}
+
+footer li:nth-child(3) span {
+	margin-left:28.5px;
+}
+
+footer li:last-child span {
+	margin-left:26.5px;
 }
 /*--------------------------------------------------------------
 2.0 - MAIN MENU
@@ -355,7 +368,7 @@ figure {
 -------------------------------------------------------------- */
 
 #hero { 
-  background: url(../img/hero.jpeg) no-repeat center center fixed; 
+  background: url(../img/hero.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -426,18 +439,32 @@ figure {
 	float: right !important;
 }
 
-dd {
-	margin:0;
-}
-
 
 
 
 
 @media screen and (max-width: 768px) {
+	
+	/*--------------------------------------------------------------
+	1.2 - HEADINGS
+	-------------------------------------------------------------- */
+	
+	footer h3 {
+		text-align:center;
+	}
+	
+	/*--------------------------------------------------------------
+	3.0 - SITE STRUCTURE
+	-------------------------------------------------------------- */
+	
 	.wrapper {
 		width: 90%;
 	}
+	
+	
+	/*--------------------------------------------------------------
+	3.1 - SINGLE COLUMNS
+	-------------------------------------------------------------- */
 	
 	.col-1-2, .col-1-4 {
 		width: 100%;
@@ -445,8 +472,24 @@ dd {
 	.col-1-4 {
 		padding:0;
 	}
-	#contact .wrapper > .row:nth-child(2) > section:first-child {
-		text-align:center;
+
+	/*--------------------------------------------------------------
+	5.4 - ALIGNMENTS
+	-------------------------------------------------------------- */
+	#contact .wrapper > .row:nth-child(2) > section section, #contact .wrapper > .row:nth-child(2) > section section {
+		width:50%;
 	}
 	
+	#contact .wrapper > .row:nth-child(2) > section section {
+		float:left;
+		width:50%;
+	}
+	
+	#contact .wrapper > .row:nth-child(2) > section .col-1-2 > div {
+		float:right;
+	}
+	
+	#contact .wrapper > .row:nth-child(2) > section .col-1-2 {
+		padding:0;
+	}
 }
